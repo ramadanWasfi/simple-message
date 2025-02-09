@@ -1,9 +1,44 @@
-<div>
-    <% for(let i = 0; i < messages.length; i++) {%>
-        <ul>
-            <li>text: <%= messages[i].text %></li>
-            <li>user: <%= messages[i].user%></li>
-            <li>Date: <%= messages[i].added%></li>
-        </ul>
-    <% } %>
-</div>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Message</title>
+        <style>
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 500px;
+                align-items: center;
+                align-content: center;
+            }
+            a{
+                text-decoration: none;
+            }
+            nav > ul > li {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/new">Message</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <% for(let i = 0; i < messages.length; i++) {%>
+                <ul>
+                    <li>text: <%= messages[i].text %></li>
+                    <li>user: <%= messages[i].user%></li>
+                    <li>Date: <%= messages[i].added%></li>
+                </ul>
+            <% } %>
+        </div>
+    </body>
+</html>

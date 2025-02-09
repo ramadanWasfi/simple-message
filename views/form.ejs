@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Message</title>
+        <style>
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" action="/new">
+
+            <input required type="text" id="name" name="name" placeholder="Ahmed..." />
+        
+            <textarea required ="message" name="messageText" placeholder="message.."></textarea>
+
+            <button type="submit" id="newMessageBtn">Submit</button>
+        
+        </form>
+    </body>
+</html>
