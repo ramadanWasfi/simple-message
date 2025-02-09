@@ -1,5 +1,7 @@
+import { messages } from "../app.mjs";
+
 function handleIndexRequest(req,res) {
-    res.end('index route');
+    res.render("index",{messages: messages});
 }
 
 export {handleIndexRequest};
